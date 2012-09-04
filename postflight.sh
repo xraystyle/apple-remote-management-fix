@@ -1,4 +1,5 @@
 #!/bin/sh
+# xraystyle's Remote Management Fix https://github.com/xraystyle/apple-remote-management-fix
 
 `echo "Starting Remote Admin Daemon " >> /var/log/system.log`
 
