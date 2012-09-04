@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "Change detected in /Library/Preferences/com.apple.RemoteManagement.plist, re-activating Remote Management" >> /var/log/system.log
+
+/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -access -on -privs -all -users ADMINACCOUNT
+
+/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate
+
+echo "Remote Management re-activated." >> /var/log/system.log
+
+exit 0
