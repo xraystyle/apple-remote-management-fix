@@ -8,6 +8,16 @@ re-enable Remote Management in System Preferences for the admin account you spec
 It also outputs to the local system log every time it fires off, so you can see how much work 
 it's saved you.
 
+The pre- and post-flight scripts are supposed to go into the .pkg file you build with PackageMaker.
+The 'remotefixd' script is what fires off when the daemon detects a change to the file that stores
+the remote management preference.
+
+Open up the .pmdoc file with PackageMaker and it'll make a lot more sense.
+
+Also, if you need a copy of PackageMaker for Mountain Lion you'll have to sign in to Apple's 
+developer site and download a bundle called 'Xcode Auxiliary Tools', it's in there. 
+(Took me an hour to figure that out. Just put it in the flippin' App Store, Apple.)
+
 Make sure you go through the scripts and change any instance of ADMINACCOUNT to the admin 
 account name on your systems before building the package.
 
