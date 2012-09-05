@@ -1,25 +1,17 @@
-Hey Mac SysAdmins! Are you tired of your pesky users disabling remote management for 
-the admin account on the Macs you manage? Yeah, it got real old, real fast. Here's
-the solution.
+Hey Mac SysAdmins! Are you tired of your pesky users disabling remote management for the admin account on the Macs you  manage? Yeah, it got real old, real fast. Here's the solution.
 
-xraystyle's Remote Management Fix is a daemon controlled by launchtl that will automatically
-re-enable Remote Management in System Preferences for the admin account you specify.
+xraystyle's Remote Management Fix is a daemon controlled by launchtl that will automatically re-enable Remote Management in System Preferences for the admin account you specify.
 
-It also outputs to the local system log every time it fires off, so you can see how much work 
-it's saved you.
+It also outputs to the local system log every time it fires off, so you can see how much work it's saved you.
 
-The pre- and post-flight scripts are supposed to go into the .pkg file you build with PackageMaker.
-The 'remotefixd' script is what fires off when the daemon detects a change to the file that stores
-the remote management preference.
+The pre- and post-flight scripts are supposed to go into the .pkg file you build with PackageMaker. The 'remotefixd' script is what fires off when the daemon detects a change to the file that stores the remote management preference.
 
 Open up the .pmdoc file with PackageMaker and it'll make a lot more sense.
 
-Also, if you need a copy of PackageMaker for Mountain Lion you'll have to sign in to Apple's 
-developer site and download a bundle called 'Xcode Auxiliary Tools', it's in there. 
+Also, if you need a copy of PackageMaker for Mountain Lion you'll have to sign in to Apple's developer site and download a bundle called 'Xcode Auxiliary Tools', it's in there. 
 (Took me an hour to figure that out. Just put it in the flippin' App Store, Apple.)
 
-Make sure you go through the scripts and change any instance of ADMINACCOUNT to the admin 
-account name on your systems before building the package.
+Make sure you go through the scripts and change any instance of ADMINACCOUNT to the admin account name on your systems before building the package.
 
 The Apple PackageMaker file should be ready to open and build once any tweaks have been made.
 
