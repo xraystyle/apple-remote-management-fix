@@ -5,3 +5,5 @@
 *.tmproj
 *.out
 *.pkg
+*.sublime-project
+*.sublime-workspace

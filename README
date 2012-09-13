@@ -1,10 +1,10 @@
 Hey Mac SysAdmins! Are you tired of your pesky users disabling remote management for the admin account on the Macs you  manage? Yeah, it got real old, real fast. Here's the solution.
 
-xraystyle's Remote Management Fix is a daemon controlled by launchtl that will automatically re-enable Remote Management in System Preferences for the admin account you specify.
+xraystyle's Remote Management Fix is a daemon controlled by launchctl that will automatically re-enable Remote Management in System Preferences for the admin account you specify.
 
 It also outputs to the local system log every time it fires off, so you can see how much work it's saved you.
 
-The pre- and post-flight scripts are supposed to go into the .pkg file you build with PackageMaker. The 'remotefixd' script is what fires off when the daemon detects a change to the file that stores the remote management preference.
+The pre- and post-flight scripts are supposed to go into the .pkg file you build with PackageMaker. The 'remotefixd' script is what runs when the daemon detects a change to the file that stores the remote management preference.
 
 Open up the .pmdoc file with PackageMaker and it'll make a lot more sense.
 
