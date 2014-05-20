@@ -1,7 +1,7 @@
 #!/bin/sh
 # xraystyle's Remote Management Fix https://github.com/xraystyle/apple-remote-management-fix
 
-echo "Change detected in /Library/Preferences/com.apple.RemoteManagement.plist, re-activating Remote Management" >> /var/log/system.log
+echo "Change detected in /private/etc/RemoteManagement.launchd" >> /var/log/system.log
 
 /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -access -on -privs -all -users ADMINACCOUNT
 
