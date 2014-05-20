@@ -11,7 +11,7 @@ fi
 
 `syslog -s -l error "Spinning up remote access before loading daemon..."`
 
-`sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -access -on -privs -all -users yourmom > /dev/null`
+`sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -access -on -privs -all -users ADMINACCT > /dev/null`
 
 `sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate > /dev/null`
 
