@@ -1,6 +1,8 @@
 --- 5-16-2014: Updated for Mavericks! ---
 Mavericks has made some changes to the way ARD works on clients, and watching the remote management plist file no longer had the desired effect. Script now checks for a different file that is only present when remote management is active.
 
+Has also been tested working on 10.8.5. Functionality on 10.7 is untested.
+
 ----
 
 Hey Mac SysAdmins! Are you tired of your pesky users disabling remote management for the admin account on the Macs you  manage? Yeah, it got real old, real fast. Here's the solution.
