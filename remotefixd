@@ -1,12 +1,22 @@
 #!/bin/sh
 # xraystyle's Remote Management Fix https://github.com/xraystyle/apple-remote-management-fix
 
-echo "Change detected in /private/etc/RemoteManagement.launchd" >> /var/log/system.log
+set -e
 
-/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -access -on -privs -all -users ADMINACCOUNT
 
-/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate
+if [ -f '/private/etc/RemoteManagement.launchd' ]; then
+	# do nothing
+	`syslog -s -l error "Remote Management is currently enabled."`
+	exit 0
+else
 
-echo "Remote Management re-activated." >> /var/log/system.log
+	`syslog -s -l error "Change detected in /private/etc/RemoteManagement.launchd"`
+
+	/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -access -on -privs -all -users ADMINACCT
+
+	/System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate
+
+	`syslog -s -l error "Remote Management re-activated."` 
+fi
 
 exit 0
